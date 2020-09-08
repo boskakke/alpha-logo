@@ -19,7 +19,7 @@ const rotateTo = (index) => {
 }
 
 logo.forEach((leaf, i) => {	
-	tl_logo.fromTo(leaf, {opacity: 0, rotate: rotateFrom(i)},{opacity: 1, rotate: rotateTo(i), ease: 'power1.out', duration: 2}, '<.5')
+	tl_logo.fromTo(leaf, {opacity: 0, rotate: rotateFrom(i)},{opacity: 1, rotate: rotateTo(i), ease: 'power1.out'}, '<.5')
 })
 
 
