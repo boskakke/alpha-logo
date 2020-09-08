@@ -19,7 +19,7 @@ const rotateTo = (index) => {
 }
 
 logo.forEach((leaf, i) => {	
-	tl_logo.fromTo(leaf, {opacity: 0, rotate: rotateFrom(i)},{opacity: 1, rotate: rotateTo(i), ease: 'power1.out'}, '<.5')
+	tl_logo.fromTo(leaf, { rotate: rotateFrom(i)},{opacity: 1, rotate: rotateTo(i)})
 })
 
 
@@ -29,6 +29,6 @@ ScrollTrigger.create({
   start: "top center",
   end: "bottom center",
   // markers: {startColor: "black", endColor: "black"},
-  scrub: true,
+  scrub: 1,
   pin: '.container',
 });
