@@ -16,10 +16,10 @@ logo.forEach((leaf) => {
 
 ScrollTrigger.create({
 	animation: tl_logo,
-  trigger: ".container",
+  trigger: ".trigger",
   start: "top center",
-  end: "bottom center-=25%",
-  markers: {startColor: "black", endColor: "black"},
+  end: "top 100px",
+  // markers: {startColor: "black", endColor: "black"},
   scrub: .5,
   pin: '.container',
 });
