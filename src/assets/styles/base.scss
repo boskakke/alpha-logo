@@ -29,7 +29,7 @@ body {
 	opacity: 0;
 	width: calc(50% - 20px);
 	height: 0;
-	padding-top: 4%;
+	padding-top: 4.5%;
 	position: absolute;
 	bottom: 0%;
 	background-color: $primary;
@@ -45,11 +45,14 @@ body {
 	z-index: 10;
 }
 
-@for $i from 1 through 9 {
-  .logo:nth-child(2n + #{$i + 1}) {
-    transform: rotate(calc(180deg / 8 * #{$i}));	
-  }
-}
+$i: 0;
+/*
+// @for $i from 1 through 9 {
+//   .logo:nth-child(2n + #{$i + 1}) {
+//     transform: rotate(calc(180deg / 8 * #{$i}));	
+//  }
+// }
+*/
 
 .animation {
 	position: relative;
