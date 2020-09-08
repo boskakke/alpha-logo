@@ -20,10 +20,8 @@ const rotateTo = (index) => {
 		return 179 / 8 * index + 'deg';
 }
 
-logo.forEach((leaf, index) => {
-	
-tl_logo.fromTo(leaf, {opacity: 0, rotate: rotateFrom(index)},{opacity: 1, rotate: rotateTo(index), ease: 'none'})
-	
+logo.forEach((leaf, index) => {	
+	tl_logo.fromTo(leaf, {opacity: 0, rotate: rotateFrom(index)},{opacity: 1, rotate: rotateTo(index), ease: 'power1.out', duration: 2})
 })
 
 //transform: rotate(calc(180deg / 8 * #{$i}));	
@@ -34,6 +32,6 @@ ScrollTrigger.create({
   start: "top center",
   end: "top 100px",
   // markers: {startColor: "black", endColor: "black"},
-  scrub: .5,
+  scrub: true,
   pin: '.container',
 });
