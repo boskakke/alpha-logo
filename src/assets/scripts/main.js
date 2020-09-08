@@ -27,7 +27,7 @@ ScrollTrigger.create({
 	animation: tl_logo,
   trigger: ".trigger",
   start: "top center",
-  end: "bottom center",
+  end: "bottom middle",
   // markers: {startColor: "black", endColor: "black"},
   scrub: 1,
   pin: '.container',
