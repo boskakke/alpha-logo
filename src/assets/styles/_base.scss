@@ -1,9 +1,12 @@
 
-
+* {
+	box-sizing: border-box;
+}
 html	{
 	min-height: 100%;
 }
 body {
+	margin: 0;
 	position: relative;	
 	background-color: #fff;
 }
@@ -11,6 +14,12 @@ body {
 .fill-layer {
 	height: 100vh;
 	width: 100%;
+	background: $primary; 
+	color: #fff;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	padding: 1rem; 
 }
 
 .animation-container {
@@ -53,27 +62,16 @@ body {
 	}
 }
 
-.cover {
-	width: calc(50% - 20px);
-	height: 0;
-	padding-top: 4.5%;
-	position: absolute;
-	bottom: 0%;
-	background-color: $primary;
-	transform-origin: center right;
-	border-right: 20px solid transparent;
-	
-}
 .logo {
 	opacity: 0;
-	width: calc(50% - 20px);
+	width: 50%;
 	height: 0;
 	padding-top: 4.5%;
 	position: absolute;
 	bottom: 0%;
 	background-color: $primary;
 	transform-origin: center right;
-	border-right: 20px solid transparent;
+	
 	
 }
 
