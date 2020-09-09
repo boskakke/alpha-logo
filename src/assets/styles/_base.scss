@@ -1,4 +1,3 @@
-$primary: #008085;
 
 
 html	{
@@ -25,8 +24,16 @@ body {
 
 .animation {
 	position: relative;
-	height: 200px;
-	width: 400px;
+	height: 150px;
+	width: 300px;
+	@include md-up {
+		height: 200px;
+		width: 400px;
+	}
+	@include lg-up {
+		height: 250px;
+		width: 500px;
+	}
 
 	&:after {
 		content: '';

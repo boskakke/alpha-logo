@@ -20,21 +20,17 @@ const rotateTo = (index) => {
 
 logo.forEach((leaf, i) => {	
 	tl_logo.set(leaf, {className: '+=logo logo--active'})
-	tl_logo.fromTo(leaf, { rotate: rotateFrom(i)},{rotate: rotateTo(i), ease: 'power3'})
+	tl_logo.fromTo(leaf, { rotate: rotateFrom(i)},{rotate: rotateTo(i), ease: 'power4'})
 })
-	
-
 
 ScrollTrigger.create({
 	animation: tl_logo,
   trigger: ".animation-container",
   start: "top top",
-  end: () => '+=' + document.querySelector('.animation-container').offsetHeight,
+  end: () => '+=' + document.querySelector('.animation-container').offsetHeight * 2,
   pinSpacing: 400,
   // snap: 1 / (logo.length - 1),
   // markers: {startColor: "black", endColor: "black"},
   scrub: true,
   pin: '.animation-container',
 });
-
-console.log(document.querySelector('.animation-container').offsetHeight)
