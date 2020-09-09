@@ -57,6 +57,9 @@ body {
 	transform-origin: center right;
 	border-right: 20px solid transparent;
 	transition: all .2s ease;
+	&--active {
+		opacity: 1;
+	}
 }
 
 
