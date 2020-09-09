@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const logo = document.querySelectorAll('.logo')
+const logo = gsap.utils.toArray('.logo')
 const tl_logo = gsap.timeline()
 
 const rotateFrom = (index) => {
@@ -19,16 +19,21 @@ const rotateTo = (index) => {
 }
 
 logo.forEach((leaf, i) => {	
-	tl_logo.fromTo(leaf, { rotate: rotateFrom(i)},{opacity: 1, rotate: rotateTo(i)})
+	tl_logo.fromTo(leaf, { rotate: rotateFrom(i)},{opacity: 1, rotate: rotateTo(i), ease: 'power3'})
 })
+	
 
 
 ScrollTrigger.create({
 	animation: tl_logo,
-  trigger: ".trigger",
-  start: "top center",
-  end: "bottom middle",
-  // markers: {startColor: "black", endColor: "black"},
-  scrub: 1,
-  pin: '.container',
+  trigger: ".animation-container",
+  start: "top top",
+  end: () => '+=' + document.querySelector('.animation-container').offsetHeight,
+  pinSpacing: 400,
+  // snap: 1 / (logo.length - 1),
+  markers: {startColor: "black", endColor: "black"},
+  scrub: true,
+  pin: '.animation-container',
 });
+
+console.log(document.querySelector('.animation-container').offsetHeight)
