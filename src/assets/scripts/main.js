@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const logo = gsap.utils.toArray('.logo')
+const cover = document.querySelector('.cover')
 const tl_logo = gsap.timeline()
 
 const rotateFrom = (index) => {
@@ -18,9 +19,12 @@ const rotateTo = (index) => {
 		return 179.9 / 8 * index + 'deg';
 }
 
+
+
+
 logo.forEach((leaf, i) => {	
-	tl_logo.set(leaf, {className: '+=logo logo--active'})
-	tl_logo.fromTo(leaf, { rotate: rotateFrom(i)},{rotate: rotateTo(i), ease: 'power4'})
+	tl_logo.set(leaf, {opacity: 1})
+	tl_logo.fromTo(leaf, { rotate: rotateFrom(i)},{rotate: rotateTo(i), ease: 'none'})
 })
 
 ScrollTrigger.create({

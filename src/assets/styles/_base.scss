@@ -53,6 +53,17 @@ body {
 	}
 }
 
+.cover {
+	width: calc(50% - 20px);
+	height: 0;
+	padding-top: 4.5%;
+	position: absolute;
+	bottom: 0%;
+	background-color: $primary;
+	transform-origin: center right;
+	border-right: 20px solid transparent;
+	
+}
 .logo {
 	opacity: 0;
 	width: calc(50% - 20px);
@@ -63,10 +74,7 @@ body {
 	background-color: $primary;
 	transform-origin: center right;
 	border-right: 20px solid transparent;
-	transition: all .2s ease;
-	&--active {
-		opacity: 1;
-	}
+	
 }
 
 
