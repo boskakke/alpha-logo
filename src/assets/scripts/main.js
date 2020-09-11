@@ -30,7 +30,7 @@ ScrollTrigger.create({
 	animation: tl_logo,
   trigger: ".animation-container",
   start: "top top",
-  end: () => '+=' + document.querySelector('.animation-container').offsetHeight,
+  end: () => '+=' + document.querySelector('.animation-container').offsetHeight * 2,
   pinSpacing: 400,
   // snap: 1 / (logo.length - 1),
   // markers: {startColor: "black", endColor: "black"},
